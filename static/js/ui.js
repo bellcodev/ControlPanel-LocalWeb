@@ -3,7 +3,7 @@ function renderMainMenu() {
 
     content.innerHTML = `
         <section class="menu-principal">
-            <h1>Panel de Control</h1>
+            <h1>Christmas Control Panel</h1>
 
             <div class="menu-grid">
                 <button class="menu-btn" onclick="renderSystemMenu()">
@@ -14,8 +14,8 @@ function renderMainMenu() {
                     Ip Geolocate
                 </button>
 
-                <button class="menu-btn">
-                    def 3
+                <button class="menu-btn" onclick="renderRunPort()">
+                    Open Port
                 </button>
 
                 <button class="menu-btn">
@@ -30,6 +30,78 @@ function renderMainMenu() {
                     def 6
                 </button>
             </div>
+        </section>
+    `
+}
+
+async function handleRunPort() {
+    const port = document.getElementById("portInput").value
+    const loc = document.getElementById("fileInput").value
+    const resultBox = document.getElementById("runPortResult")
+
+    if (!port) {
+        resultBox.textContent = "Error: Port is required"
+        return
+    }
+
+    if (!loc) {
+        resultBox.textContent = "Error: Path is required"
+        return
+    }
+
+    const form = new FormData()
+    form.append("port", port)
+    form.append("loc", loc)
+
+    let res
+    try {
+        res = await fetch("/api/run-port", {
+            method: "POST",
+            body: form
+        })
+    } catch (err) {
+        resultBox.textContent = "Network error: " + err
+        return
+    }
+
+    let data
+    try {
+        data = await res.json()
+    } catch {
+        const text = await res.text()
+        resultBox.textContent = "Server error:\n" + text
+        return
+    }
+
+    resultBox.textContent = JSON.stringify(data, null, 2)
+}
+
+window.handleRunPort = handleRunPort
+
+async function renderRunPort() {
+    const content = document.getElementById("content")
+
+    content.innerHTML = `
+        <h1>Run on Port</h1>
+
+        <section class="run-port-menu">
+            <div class="card">
+                <label for="portInput"><strong>Port</strong></label> <br>
+                <input id="portInput" type="number" placeholder="Enter a port (e.g. 8000)" min="1" max="65535">
+                <br>
+                <label for="fileInput"><strong>Path</strong></label> <br>
+                <input id="fileInput" type="text" placeholder="Enter a file or folder path">
+
+                <button class="menu-btn" onclick="handleRunPort()">
+                    Run
+                </button>
+            </div>
+
+            <div id="runPortResult"></div>
+
+            <button class="back-btn" onclick="renderMainMenu()">
+                ← Back to main menu
+            </button>
         </section>
     `
 }
@@ -150,7 +222,7 @@ async function renderSystemMenu() {
         </section>
 
         <button class="back-btn" onclick="renderMainMenu()">
-            ← Volver al menú principal
+            ← Back to main menu
         </button>
     `
 }
@@ -195,7 +267,7 @@ async function renderGeoIP() {
             <div id="geoResult"></div>
 
             <button class="back-btn" onclick="renderMainMenu()">
-                ← Volver al menú principal
+                ← Back to main menu
             </button>
         </section>
     `
