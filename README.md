@@ -1,5 +1,6 @@
 # Christmas Control Panel
-<img width="1319" height="572" alt="image" src="https://github.com/user-attachments/assets/13daa811-ce8e-456a-bdc9-1e44cbf95f5d" />
+<img width="1299" height="597" alt="image" src="https://github.com/user-attachments/assets/9691f1ae-12b5-4058-8889-6a824cfe675e" />
+
 
 # 🎄 Christmas Control Panel
 Un panel de control para PC con un estilo navideño moderno, creado especialmente para la temporada. Su objetivo es ofrecer herramientas simples, rápidas y útiles dentro de una interfaz festiva y agradable.
@@ -25,6 +26,12 @@ Permite obtener la geolocalización aproximada de una dirección IP:
 - Región
 - ISP (si está disponible)
 - Coordenadas aproximadas
+
+### ✅ *Run Port*
+Permite abrir un puerto local en una carpeta o archivo de la PC:
+- Pide numero de Puerto
+- Pide ubicacion del archivo a mostrar
+- Abre el puerto en localhost
 
 ---
 
