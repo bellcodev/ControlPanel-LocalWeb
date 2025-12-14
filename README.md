@@ -53,6 +53,13 @@ Permite abrir un puerto local en una carpeta o archivo de la PC:
 
 Muestra tu IP publica en formato de texto
 
+### ✅ *Wifi Utils*
+| <img width="1338" height="664" alt="image" src="https://github.com/user-attachments/assets/8f7bfa1f-4b4f-44d2-bf22-3a647a0c5dfc" /> |
+|---|
+
+Conectarse a redes wifi facilmente desede la web-app
+
+
 ---
 
 ## 🎅 Estilo navideño
@@ -72,6 +79,7 @@ Perfecto para lanzar durante las fiestas.
 │   ├─ 📄 _init_.py
 │   ├─ 🔧 port_utils.py
 │   └─ 🖥 system_info.py
+│   └─ 🖥 wifi_utils.py
 │
 ├─ 🎨 static/
 │   ├─ 🌟 css/
