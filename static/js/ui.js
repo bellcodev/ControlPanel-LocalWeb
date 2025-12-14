@@ -22,8 +22,8 @@ function renderMainMenu() {
                     My Public IP
                 </button>
 
-                <button class="menu-btn">
-                    def 5
+                <button class="menu-btn" onclick="renderWifiUtils()">
+                    Wifi Utils
                 </button>
 
                 <button class="menu-btn">
@@ -31,6 +31,50 @@ function renderMainMenu() {
                 </button>
             </div>
         </section>
+    `
+}
+
+async function wifiScan() {
+    let txt = document.getElementById("networks")
+    const res = await fetch("/api/wifi/scan")
+    const data = await res.json()
+    txt.innerText = "Scaning..."
+    txt.innerText = data
+}
+
+async function wifiConect() {
+    let ssid = document.getElementById("ssid")
+    let pswd = document.getElementById("networkPswd")
+    const form = new FormData()
+    form.append("ssid", ssid.value)
+    form.append("pswd", pswd.value)
+    let res = await fetch("/api/wifi/connect", {
+        method: "POST",
+        body: form
+    })
+    const data = await res.json()
+
+}
+
+async function renderWifiUtils() {
+    const content = document.getElementById("content")
+    content.innerHTML = `
+        <h1>Wifi Utils</h1>
+        <div class="card">
+            <button class="menu-btn" onclick="wifiScan()">
+                Scan Wifi
+            </button>
+            <h3>Networks</h3>
+            <div id="networks"></div>
+        </div>
+        <div class="card">
+            <input type="text" id="ssid" placeholder="network name">
+            <br>
+            <input type="password" id="networkPswd" placeholder="network password">
+            <button class="menu-btn" onclick="wifiConect()">
+                Connect
+            </button>
+        </div>
     `
 }
 
