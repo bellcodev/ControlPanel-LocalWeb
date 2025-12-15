@@ -1,8 +1,18 @@
-# Christmas Control Panel
+# 🎄 Christmas Control Panel
 | <img width="1349" height="683" alt="image" src="https://github.com/user-attachments/assets/31149a80-f7e4-408c-bfa4-48923b1ed494" /> |
 |---|
 
-# 🎄 Christmas Control Panel
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
+![License](https://img.shields.io/github/license/bellcodev/Christmas-ControlPanel)
+![Last Commit](https://img.shields.io/github/last-commit/bellcodev/Christmas-ControlPanel)
+![Issues](https://img.shields.io/github/issues/bellcodev/Christmas-ControlPanel)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blue)
+![Stars](https://img.shields.io/github/stars/bellcodev/Christmas-ControlPanel?style=social)
+![Forks](https://img.shields.io/github/forks/bellcodev/Christmas-ControlPanel?style=social)
+
 Un panel de control para PC con un estilo navideño moderno, creado especialmente para la temporada. Su objetivo es ofrecer herramientas simples, rápidas y útiles dentro de una interfaz festiva y agradable.
 
 Actualmente el proyecto está en desarrollo activo y se irán añadiendo nuevas funciones con el tiempo.
