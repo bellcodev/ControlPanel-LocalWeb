@@ -1,5 +1,5 @@
 # 🎄 Christmas Control Panel
-| <img width="1349" height="683" alt="image" src="https://github.com/user-attachments/assets/31149a80-f7e4-408c-bfa4-48923b1ed494" /> |
+| <img width="1348" height="679" alt="image" src="https://github.com/user-attachments/assets/8d055620-3eb0-4a5a-8bbb-94ff095d4b49" /> |
 |---|
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
