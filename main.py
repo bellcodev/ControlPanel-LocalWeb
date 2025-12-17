@@ -6,6 +6,7 @@ from libs.port_utils import runPort
 from libs.wifi_utils import connect_to_network, scan_networks
 from libs.port_list import portList
 from libs.port_check import portCheck
+from libs.search_files import searchFile
 
 app = FastAPI()
 
@@ -53,3 +54,11 @@ async def apiPortCheck(
 ):
     result = portCheck(a, p)
     return result
+
+@app.post("/api/files/search")
+async def apiSearchFiles(
+    d: str = Form(...),
+    n: str = Form(...)
+):
+    files = searchFile(f"{d}\\", n)
+    return files
