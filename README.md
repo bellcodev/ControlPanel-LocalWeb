@@ -88,7 +88,7 @@ Permite abrir un puerto local en una carpeta o archivo de la PC:
 🔍 Comprueba si un *puerto específico* está abierto o accesible en una dirección determinada. Perfecto para validar servicios locales, APIs, servidores o configuraciones remotas.
 
 ### ✅ Search Files
-| <img width="1349" height="678" alt="image" src="https://github.com/user-attachments/assets/0cd5865a-561d-4720-975f-be92e3be33b9" /> |
+| <img width="1348" height="682" alt="image" src="https://github.com/user-attachments/assets/0afe74e3-53fa-4a67-917e-340b4a4db622" /> |
 |---|
 
 🔍 **Busca** uno o mas archivos en un disco o ubicacion exacta en la pc introduciendo el nombre o solamente con lo que empieza el nombre del archivo a buscar.
@@ -118,6 +118,7 @@ Perfecto para lanzar durante las fiestas.
 │   ├─ 🔧 port_utils.py
 │   ├─ 🖥 system_info.py
 │   └─ 🖥 wifi_utils.py
+│   └─ 🔍 search_files.py
 │
 ├─ 🎨 static/
 │   ├─ 🌟 css/
